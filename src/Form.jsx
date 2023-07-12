@@ -1,7 +1,14 @@
 import { useState } from "react";
 
-const Form = ({submitForm}) => {
+const Form = () => {
   const [newITemName, setNewItemName] = useState("");
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    console.log(newITemName);
+  };
+
   return (
     <form onSubmit={submitForm}>
       <h4>Grocery bud</h4>
